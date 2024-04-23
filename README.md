@@ -2,7 +2,9 @@
 ## **A Data Wrangling Project based on the famous Titanic problem.**  
 Data Source: https://www.kaggle.com/competitions/spaceship-titanic/data  
 Citation: Addison Howard, Ashley Chow, Ryan Holbrook. (2022). Spaceship Titanic. Kaggle. https://kaggle.com/competitions/spaceship-titanic  
-  
+
+### Each Step in Project Completed by Cullen Peterson
+
 ## **Dataset provided by Kaggle contains the following data:**  
 **train.csv** - Personal records for about two-thirds (~8700) of the passengers, to be used as training data.  
 * PassengerId - A unique Id for each passenger. Each Id takes the form "gggg_pp" where "gggg" indicates a group the passenger is traveling with and "pp" is their number within the group. People in a group are often family members, but not always.  
@@ -28,6 +30,7 @@ Using these three datasets, I was to learn more about the relationships between 
 ### How to Acquire Data  
 ***API Command:***  
 kaggle competitions download -c spaceship-titanic  
+
 ### BDD Scenarios
 #### **Feature 1:** Passenger Dimensional Transportation Prediction  
 ##### **Scenario 1:** I wish to predict whether someone was transported to another dimension  
@@ -35,22 +38,22 @@ Given: The training data as well as test data of the Kaggle competition
 When: I train a model on the training data and then apply it to the test data  
 Then: I will be able to predict whether a passenger was transported to another dimension with some degree of accuracy  
 #### **Feature 2:** Planetary Economic Status Evaluation  
-##### **Scenario 1:** I am someone who wants to discover economic disparity between planets  
+##### **Scenario 2:** I am someone who wants to discover economic disparity between planets  
 Given: The "HomePlanet", "VIP" status, and expenditures at the various luxury amenities  
 When: Comparing the expenditures of people from one planet to those of another  
 Then: I will be able to show if a trend exists that shows any sort of economic or cultural disparity due to differences in status and spending  
 #### **Feature 3:** Evaluation of Transportation Outcomes  
-#### **Scenario 3:** I am someone who wishes to assess the accuracy of my model for further tweaking
-Given: The test data results for "Transported", my predictive model, and access to the test data
-When: I apply my model to the test data and submit my predictions
-Then: I will receive feedback on my accuracy and update my model to achieve a higher classification accuracy
+##### **Scenario 3:** I am someone who wishes to assess the accuracy of my model for further tweaking
+Given: The test data results for "Transported", my predictive model, and access to the test data  
+When: I apply my model to the test data and submit my predictions  
+Then: I will receive feedback on my accuracy and update my model to achieve a higher classification accuracy  
 
 ## Step 2: ETL Pipeline  
 ### Training Data  
 
-#### Normalizing Extracted Data  
+#### Normalizing Extracted Data and Creating New Features  
 
-#### Creating New Features  
+#### Modeling  
 
 #### Predicting Outcomes of BDD Scenarios  
 
@@ -59,6 +62,9 @@ Then: I will receive feedback on my accuracy and update my model to achieve a hi
 * Add the features I created to the test data
 * Predict the target outcome "Transported"
 * Predict outcomes of BDD scenarios and see if they match my expectations and findings from training data
+
+### Struggles/Bottlenecks  
+My main struggle with the ETL pipeline was getting a working DAG using Dagster.  
 
 
 ## Step 3: Predicting Outcomes and Finalizing  
